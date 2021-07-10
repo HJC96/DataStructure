@@ -1,3 +1,6 @@
++// typedef? Defining an existing datatype as a new datatype
++// How? typedef original new ;
++// (example)typedef unsigned char BYTE ;
 #include <stdio.h>
 #include <string.h>
 
