@@ -1,6 +1,6 @@
-+// typedef? Defining an existing datatype as a new datatype
-+// How? typedef original new ;
-+// (example)typedef unsigned char BYTE ;
+// typedef? Defining an existing datatype as a new datatype
+// How? typedef original new ;
+// (example)typedef unsigned char BYTE ;
 #include <stdio.h>
 #include <string.h>
 
@@ -41,7 +41,7 @@ int main(int argc, const char* argv[]) {
 	Point delta = { 10, 10 };
 	Point result;
 	result = translate(p, delta);
-	printf("»õ·Î¿î Á¡ÀÇ ÁÂÇ¥´Â (%d, %d)ÀÔ´Ï´Ù. \n", result.x, result.y);
+	printf("ìƒˆë¡œìš´ ì ì˜ ì¢Œí‘œëŠ” (%d, %d)ì…ë‹ˆë‹¤. \n", result.x, result.y);
 
 
 	return 0;
