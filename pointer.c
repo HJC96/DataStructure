@@ -5,7 +5,6 @@
 // adress -> &
 // NULL <- initialize pointer variable
 
-
 #include "stdio.h"
 #include "string.h"
 
