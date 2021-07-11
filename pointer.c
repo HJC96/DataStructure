@@ -3,6 +3,7 @@
 // int  = 4byte
 // If you use 'sizeof' function, then you can realize the size of variable
 // adress -> &
+// NULL <- initialize pointer variable
 
 
 #include "stdio.h"
