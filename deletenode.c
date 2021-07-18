@@ -28,12 +28,12 @@ void main() {
 
 	// 헤드노드를 삭제 함
 	remove_head(&head);
-	printf("헤드노드 삭제 후 \n");
+	printf("\n헤드노드 삭제 후 \n");
 	display_list(head);
 
 	// 헤드노드를 삭제 함
 	remove_head(&head);
-	printf("헤드노드 삭제 후\n");
+	printf("\n헤드노드 삭제 후\n");
 	display_list(head);
 
 
@@ -49,10 +49,10 @@ void remove_head(ListNode** phead) {
 	}
 }
 
-void display_list(ListNode* node){
-	if(node != NULL)
-		printf("(node = %d %d)\n", node->data, node->link->data);
-	else
-		printf("(node = %d)\n", node->data);
-
+void display_list(ListNode* head){
+	ListNode* curr = head;
+	while (curr != NULL) {
+		printf("%d ", curr->data);
+		curr = curr->link;
+	}
 }
