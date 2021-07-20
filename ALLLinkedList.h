@@ -16,6 +16,8 @@ extern int get_min(ListNode* head);
 extern void delete_max(ListNode** head);
 extern void display_list(ListNode* head);
 extern ListNode* concat(ListNode* head1, ListNode* head2);
+extern int get_length(ListNode* head);
+extern void remove_node(ListNode** phead, ListNode* prev, ListNode* remove);
 
 
 #endif LINKEDLIST_H    // CALC_DATA_H 매크로 정의
