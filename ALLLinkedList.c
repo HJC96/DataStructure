@@ -11,14 +11,16 @@ void removeLast(ListNode** phead);
 int get_sum(ListNode* head);
 void remove_head(ListNode** phead);
 void display_list(ListNode* head);
-
+int get_length(ListNode* head);
+void remove_node(ListNode** phead, ListNode* prev, ListNode* remove);
 
 void insert_node(ListNode** phead, ListNode* p, ListNode* new_node)
 {
 	//printf("before : new_node = %p\n", new_node);
 	//printf("before : *phead = %p\n", *phead);
-
-	if (p == NULL) {
+	// 이중포인터 head를 해줘야 head가 바뀜, ListNode* p, ListNode
+	if (p == NULL) 
+	{
 		new_node->link = *phead;
 		*phead = new_node;
 	}
@@ -145,38 +147,37 @@ int get_min(ListNode* head)
 	// 결과값 min을 반환
 	return min;
 }
- // 최댓값 제거
-//void delete_max(ListNode** head)
-//{
-//	int max = 0;
-//	ListNode* current = *head;
-//	ListNode* prev = NULL, *next = NULL;
-//
-//	if (current == NULL) // NULL리스트이면 return
-//		return;
-//	else if (current->link == NULL) // 단일노드 리스트이면
-//	{
-//		*head = NULL; // head를 NULL로 하고
-//		free(current); // current를 제거함
-//	}
-//	max = get_max(*head);
-//
-//	while (current->link != NULL) {
-//		prev = current;
-//		next = current->link;
-//
-//		if (current->data == max) { // current 노드가 max 값을 가질 때
-//			remove_node(head, NULL, current);
-//			current = next;
-//		}
-//		else if (next->data == max) {
-//			remove_node(head, current, next);
-//			current = prev;
-//		}
-//		else
-//			current = current->link;
-//	}
-//}
+// 최댓값 제거
+void delete_max(ListNode** head)
+{
+	int max = 0;
+	ListNode* current = *head;
+	ListNode* prev = NULL, *next = NULL;
+	if (current == NULL) // NULL리스트이면 return
+		return;
+	else if (current->link == NULL) // 단일노드 리스트이면
+	{
+		*head = NULL; // head를 NULL로 하고
+		free(current); // current를 제거함
+	}
+	max = get_max(*head);
+
+	while (current->link != NULL) {
+		prev = current;
+		next = current->link;
+
+		if (current->data == max) { // current 노드가 max 값을 가질 때
+			remove_node(head, NULL, current);
+			current = next;
+		}
+		else if (next->data == max) {
+			remove_node(head, current, next);
+			current = prev;
+		}
+		else
+			current = current->link;
+	}
+}
 
 // 두 연결리스트를 병합함
 // 두 연결리스트의 head가 입력값
@@ -203,4 +204,24 @@ void display_list(ListNode* head) {
 		printf("%d ", curr->data);
 		curr = curr->link;
 	}
+}
+
+int get_length(ListNode* head) {
+	int n = 0;
+
+	ListNode* current = head;
+	while (current != NULL) {
+		current = current->link;
+		n++;
+	}
+	return n;
+}
+
+void remove_node(ListNode** phead, ListNode* prev, ListNode* remove)
+{
+	if (prev == NULL)
+		*phead = (*phead)->link;
+	else
+		prev->link = remove->link;
+	free(remove);
 }
