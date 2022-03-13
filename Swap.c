@@ -16,9 +16,7 @@ int main(int argc, char* argv[]) {
 
 void Swap(int* px, int* py) {
 
-	int tmp;
-
-	tmp = *px;
+	int tmp = *px;
 	*px = *py;
 	*py = tmp;
 
