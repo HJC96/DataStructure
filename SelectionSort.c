@@ -11,9 +11,21 @@
 
 void SelectionSort(int unSorted[]);
 void main(void){
+    int n;
+    printf("Make random numbers.\n");
+    printf("Enter numbers: ");
+    scanf("%d", &n);
+    int arr[n];
+    for(int i = 0; i < n; i++)
+        arr[i] = rand() % 1000;
+    printf("Unsorted list\n");
+    for(int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
 
-    int arr[10] = {9,8,1,3,5,2,7,60,4,0};
     SelectionSort(arr);
+    
+    printf("\nSorted list\n");
+    
     for(int i=0; i<10; i++)
         printf("%d ", arr[i]);
 
