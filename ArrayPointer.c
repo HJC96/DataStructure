@@ -19,7 +19,7 @@ int main(){
 
     printf("==================================\n");
     printf("size of p1: %lu \n", sizeof(p1));
-    printf("size of p2: %lu \n", sizeof(p1));
+    printf("size of p2: %lu \n", sizeof(p2));
     printf("==================================\n");
 
     for(int i =0; i<row1;i++){
