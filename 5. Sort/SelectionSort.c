@@ -2,7 +2,6 @@
 1. 현재 unsorted 된 int들 중에서 가장 작은 값을 찾는다.
 2. 그 값을 sorted list에 추가한다
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
