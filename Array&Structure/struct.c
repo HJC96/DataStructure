@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#pragma warning(disable:4996)
-
 struct Person {
 	char name[100];
 	int age;
