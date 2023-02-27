@@ -34,10 +34,10 @@ int main(int argc, const char* argv[]) {
 	p1.x = 100;
 	p1.y = 100;
 
-	p2 = p1; //±¸Á¶Ã¼ º¹»ç
+	p2 = p1;
 
 	struct Person personC = { "Park", 40, 170, 66 };
-	printf("personCÀÇ ÀÌ¸§ = %s, ³ªÀÌ = %d\n", personC.name, personC.age);
+	printf("personC name = %s, personC age = %d\n", personC.name, personC.age);
 
 
 
