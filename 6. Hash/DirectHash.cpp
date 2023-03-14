@@ -10,9 +10,7 @@ typedef struct Hash
     string data;
 };
 
-
 Hash Nil;
-
 
 Hash Direct_Address_Search(Hash* Table, Hash x)
 {
@@ -68,9 +66,5 @@ int main()
     cout << Direct_Address_Search(Direct_Address, x3).data << endl;
     cout << endl;
 
-
-
-
     delete []Direct_Address;
-
 }
