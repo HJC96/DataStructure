@@ -58,7 +58,6 @@ void Queue_template<T>::Enqueue(T num)
     {
         arr[++front] = num;
         rear++;
-
     }
     else
     {
