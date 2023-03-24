@@ -26,4 +26,5 @@ extern void insert_node(ListNode** phead, ListNode *p,ListNode* new_node)
 
 	//printf("after : new_node = %p\n", new_node);
 	//printf("after : *phead = %p\n", *phead);
+
 }
