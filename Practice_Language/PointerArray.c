@@ -28,5 +28,6 @@ int main(){
         printf("value of p2[%d]: %p, reference value: %s \n",i, p2[i], p2[i]);
     }
     printf("==================================================\n");
+
     return 0;
 }
