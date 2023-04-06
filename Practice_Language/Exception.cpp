@@ -6,7 +6,7 @@ bool check_range(int num)
 {
     if(num > 200)
     {
-        throw out_of_range("범위를 벗어났습니다");
+        throw out_of_range("범위를 벗어났습니다!");
     }
     return true;
 }
