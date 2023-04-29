@@ -8,7 +8,8 @@ void InsertionSort(int arr[], int size){
     for(int i=1;i<size;i++){
         int idx = i;
         while(arr[idx-1]>arr[idx] && idx>=1){
-            SWAP(arr[idx-1], arr[idx]);
+            SWAP(arr[idx-1], arr[idx], tmp);
+            idx--;
         }
     }
 }
