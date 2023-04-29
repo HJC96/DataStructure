@@ -1,7 +1,5 @@
 #include <iostream>
 
-#define SWAP(x,y,t) ((t = x), (x = y), (y = t))
-
 using namespace std;
 
 void Merge(int arr[], int tmp[], int left, int mid, int right){
