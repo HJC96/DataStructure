@@ -8,8 +8,6 @@ typedef struct ListNode {
 	struct ListNode* link;
 }ListNode;
 
-
-
 int main(int argc, char* argv[]) {
 	ListNode* p1;
 	ListNode* p2;
