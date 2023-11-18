@@ -33,8 +33,6 @@ int n;
         printf("\nError");
 }
 
-
-
 void SelectionSort(int unSorted[], int n){
     int temp, min;
     for(int i = 0; i < n - 1; i++){
